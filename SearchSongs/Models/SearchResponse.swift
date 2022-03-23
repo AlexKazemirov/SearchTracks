@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 struct SearchResponse: Decodable {
-    
     var resultCount: Int
     var results: [Track]
 }

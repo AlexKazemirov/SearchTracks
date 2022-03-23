@@ -54,7 +54,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let track = searchResponce?.results[indexPath.row]
         let urlDefault = "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ae/4c/d4/ae4cd42a-80a9-d950-16f5-36f01a9e1881/source/60x60bb.jpg"
         cell.imageView?.imageFromURL(urlString: track?.artworkUrl60 ?? urlDefault, PlaceHolderImage: UIImage(named: "imagename")!)
-        cell.textLabel?.text = track?.trackName
+        cell.textLabel?.text = track?.trackName ?? "No name song"
+        cell.backgroundColor = .systemGreen
         return cell
     }
     
@@ -86,7 +87,7 @@ extension UIImageView {
 
 extension ViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        let urlString = "https://itunes.apple.com/search?term=\(searchText)&limit=30"
+        let urlString = "https://itunes.apple.com/search?term=\(searchText)&limit=50"
         
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { (_) in
