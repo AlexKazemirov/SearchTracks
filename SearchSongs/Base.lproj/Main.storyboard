@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OHx-6R-c5p">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aYh-oj-6JS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -34,6 +34,7 @@
                             <constraint firstItem="XfE-pL-o1d" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kNL-PV-mah"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Music" id="vlt-bO-NgS"/>
                     <navigationItem key="navigationItem" title="Search" id="n1u-9O-elh"/>
                     <connections>
                         <outlet property="table" destination="XfE-pL-o1d" id="bEG-N4-lFk"/>
@@ -41,12 +42,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928.98550724637687" y="89.732142857142847"/>
+            <point key="canvasLocation" x="1873.913043478261" y="89.732142857142847"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Music-->
         <scene sceneID="efA-5f-wHK">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OHx-6R-c5p" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Music" image="music.note" catalog="system" id="xIe-zA-EZh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EXj-3P-HnH">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -59,10 +61,46 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m1U-Is-G1i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="89.732142857142847"/>
+        </scene>
+        <!--Play-->
+        <scene sceneID="vQH-1G-R7b">
+            <objects>
+                <viewController storyboardIdentifier="AnimationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8iI-fA-B0C" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DAu-qe-TM4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cwA-dp-qYH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Play" image="play.square" catalog="system" id="uDI-aK-4cz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WVa-rb-MuY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="964" y="883"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="eig-9R-YJW">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="aYh-oj-6JS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="n5O-EU-Bfs">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="OHx-6R-c5p" kind="relationship" relationship="viewControllers" id="fnI-p5-uSA"/>
+                        <segue destination="8iI-fA-B0C" kind="relationship" relationship="viewControllers" id="9iE-SE-o9h"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GqQ-QU-fdO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="18.840579710144929" y="89.732142857142847"/>
         </scene>
     </scenes>
     <resources>
+        <image name="music.note" catalog="system" width="97" height="128"/>
+        <image name="play.square" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

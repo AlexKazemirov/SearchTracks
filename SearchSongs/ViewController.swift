@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ViewController: UIViewController {
     
@@ -20,9 +21,27 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 120, height: 30))
+        view.addSubview(button)
+        button.center = view.center
+        button.setTitle("Settings", for: .normal)
+        button.backgroundColor = .systemIndigo
+        button.addTarget(self, action: #selector(tapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(tap2), for: .touchDown)
+        
+        
         setupTableView()
         setupSearchBar()
         
+    }
+    
+    @objc func tap2() {
+        
+    }
+    
+    @objc func tapped() {
+        let vc = UIHostingController(rootView: SwiftUIView())
+        present(vc, animated: true)
     }
     
     
@@ -87,7 +106,7 @@ extension UIImageView {
 
 extension ViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        let urlString = "https://itunes.apple.com/search?term=\(searchText)&limit=50"
+        let urlString = "https://itunes.apple.com/search?term=\(searchText)&limit=20"
         
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { (_) in

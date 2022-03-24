@@ -16,6 +16,7 @@
 		301C1CC427E9F9C9003D6964 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301C1CC327E9F9C8003D6964 /* SearchResponse.swift */; };
 		301C1CC627EA038F003D6964 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301C1CC527EA038F003D6964 /* NetworkService.swift */; };
 		301C1CCA27EA1078003D6964 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301C1CC927EA1078003D6964 /* NetworkDataFetcher.swift */; };
+		307F5D6827ECF596002860D0 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F5D6727ECF596002860D0 /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		301C1CC327E9F9C8003D6964 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		301C1CC527EA038F003D6964 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		301C1CC927EA1078003D6964 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		307F5D6727ECF596002860D0 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				301C1CB827E9EA74003D6964 /* Assets.xcassets */,
 				301C1CBA27E9EA74003D6964 /* LaunchScreen.storyboard */,
 				301C1CBD27E9EA74003D6964 /* Info.plist */,
+				307F5D6727ECF596002860D0 /* SwiftUIView.swift */,
 			);
 			path = SearchSongs;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				301C1CCA27EA1078003D6964 /* NetworkDataFetcher.swift in Sources */,
+				307F5D6827ECF596002860D0 /* SwiftUIView.swift in Sources */,
 				301C1CC627EA038F003D6964 /* NetworkService.swift in Sources */,
 				301C1CC427E9F9C9003D6964 /* SearchResponse.swift in Sources */,
 				301C1CB427E9EA73003D6964 /* ViewController.swift in Sources */,
